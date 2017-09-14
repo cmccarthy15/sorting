@@ -1,57 +1,28 @@
 function split(wholeArray) {
 
-<<<<<<< HEAD
       /* your code here to define the firstHalf and secondHalf arrays */
-      var firstHalf = wholeArray.slice(0,wholeArray.length/2);
-      var secondHalf = wholeArray.slice(wholeArray.length/2);
+      var firstHalf = wholeArray.slice(0, wholeArray.length / 2);
+      var secondHalf = wholeArray.slice(wholeArray.length / 2);
       return [firstHalf, secondHalf];
 
     }
 
-    function merge(first,second) {
+    function merge(first, second) {
       var firstIndex = 0;
       var secondIndex = 0;
       var result = [];
 
-      while(firstIndex < first.length && secondIndex < second.length) {
-        if(first[firstIndex] <= second[secondIndex]){
-          result.push(first[firstIndex])
-          firstIndex ++
+      while (firstIndex < first.length && secondIndex < second.length) {
+        if (first[firstIndex] <= second[secondIndex]){
+          result.push(first[firstIndex]);
+          firstIndex++;
         } else {
-          result.push(second[secondIndex])
-          secondIndex ++
+          result.push(second[secondIndex]);
+          secondIndex++;
         }
       }
-      var slice1 = first.slice(firstIndex)
-      var slice2 = second.slice(secondIndex)
-      result = result.concat(slice1).concat(slice2)
+      var slice1 = first.slice(firstIndex);
+      var slice2 = second.slice(secondIndex);
+      result = result.concat(slice1).concat(slice2);
       return result;
     }
-=======
-    /* your code here to define the firstHalf and secondHalf arrays */
-    var firstHalf = wholeArray.slice(0,wholeArray.length/2);
-    var secondHalf = wholeArray.slice(wholeArray.length/2);
-    return [firstHalf, secondHalf];
-
-  }
-
-  function merge(first,second) {
-    var firstIndex = 0;
-    var secondIndex = 0;
-    var result = [];
-
-    while(firstIndex < first.length && secondIndex < second.length) {
-      if(first[firstIndex] <= second[secondIndex]){
-        result.push(first[firstIndex])
-        firstIndex ++
-      } else {
-        result.push(second[secondIndex])
-        secondIndex ++
-      }
-    }
-    var slice1 = first.slice(firstIndex)
-    var slice2 = second.slice(secondIndex)
-    result = result.concat(slice1).concat(slice2)
-    return result;
-  }
->>>>>>> a315daec88ff68c43d176ad284f24f87ada59500

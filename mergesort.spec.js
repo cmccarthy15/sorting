@@ -11,9 +11,9 @@ describe('Split Array function', function() {
 describe('Merge function', function() {
   it('takes two sorted arrays and returns a merged array', function() {
     // your code here
-    expect(merge([],[])).toEqual([]);
-    expect(merge([1],[2])).toEqual([1,2]);
-    expect(merge([1, 5], [2,3,8])).toEqual([1, 2, 3, 5,8]);
+    expect(merge([], [])).toEqual([]);
+    expect(merge([1], [2])).toEqual([1, 2]);
+    expect(merge([1, 5], [2, 3, 8])).toEqual([1, 2, 3, 5, 8]);
     //expect(merge([11, 12, 13, 14, 15, 16])).toEqual([[11, 12, 13], [14, 15, 16]]);
   });
 });
