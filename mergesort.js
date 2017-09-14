@@ -18,6 +18,7 @@ function merge(first, second) {
       secondIndex++;
     }
   }
+  //check big O notation
   const firstRemain = first.slice(firstIndex), secondRemain = second.slice(secondIndex);
   result = result.concat(firstRemain).concat(secondRemain);
   return result;
