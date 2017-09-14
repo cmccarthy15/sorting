@@ -1,8 +1,8 @@
 function bubbleSort(array) {
-  var sorted = false;
-  for (var end = array.length; end > 0 && !sorted; end--){
+  let sorted = false;
+  for (let end = array.length; end > 0 && !sorted; end--){
     sorted = true;
-    for (var j = 0; j < end; j++){
+    for (let j = 0; j < end; j++){
       if (!inOrder(array, j)){
         swap(array, j);
         sorted = false;
@@ -34,7 +34,7 @@ function inOrder(array, index){
 // not how many swaps are made
 // how could we use swap to count that instead?
 function swap(array, index) {
-  var oldLeft = array[index];
+  const oldLeft = array[index];
   array[index] = array[index + 1];
   array[index + 1] = oldLeft;
 
