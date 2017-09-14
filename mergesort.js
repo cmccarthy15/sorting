@@ -1,8 +1,9 @@
 function split(wholeArray) {
 
       /* your code here to define the firstHalf and secondHalf arrays */
-      var firstHalf = wholeArray.slice(0, wholeArray.length / 2);
-      var secondHalf = wholeArray.slice(wholeArray.length / 2);
+      var center = wholeArray.length / 2;
+      var firstHalf = wholeArray.slice(0, center);
+      var secondHalf = wholeArray.slice(center);
       return [firstHalf, secondHalf];
 
     }
@@ -21,8 +22,18 @@ function split(wholeArray) {
           secondIndex++;
         }
       }
-      var slice1 = first.slice(firstIndex);
-      var slice2 = second.slice(secondIndex);
-      result = result.concat(slice1).concat(slice2);
+      var firstRemain = first.slice(firstIndex);
+      var secondRemain = second.slice(secondIndex);
+      result = result.concat(firstRemain).concat(secondRemain);
       return result;
+    }
+
+    function mergeSort(array){
+      if (array.length < 2){
+        return array;
+      }
+      var splits = split(array),
+        left = splits[0],
+        right = splits[1];
+      return merge(mergeSort(left), mergeSort(right));
     }
